@@ -26,8 +26,8 @@ spring:
           uri: lb://empleado-service
           predicates:
             - Path=/empleado/**
-        - id: justificativo-service
-          uri: lb://justificativo-service
+        - id: justificativos-service
+          uri: lb://justificativos-service
           predicates:
             - Path=/justificativo/**
         - id: planillasueldo-service
