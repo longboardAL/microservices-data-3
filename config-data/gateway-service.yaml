@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8080
 spring:
   application:
     name: gateway-service
@@ -18,26 +18,26 @@ spring:
             allowed-headers: "*"
             allow-credentials: true          
       routes:
-        - id: autorizacion-service
-          uri: lb://autorizacion-service
+        - id: horasextras-service
+          uri: lb://horasextras-service
           predicates:
-            - Path=/autorizacion/**
+            - Path=/horasextras/**
         - id: empleado-service
           uri: lb://empleado-service
           predicates:
             - Path=/empleado/**
-        - id: justificacion-service
-          uri: lb://justificacion-service
+        - id: justificativo-service
+          uri: lb://justificativo-service
           predicates:
-            - Path=/justificacion/**
-        - id: planilla-service
-          uri: lb://planilla-service
+            - Path=/justificativo/**
+        - id: planillasueldo-service
+          uri: lb://planillasueldo-service
           predicates:
-            - Path=/planilla/**        
-        - id: reloj-service
-          uri: lb://reloj-service
+            - Path=/planillasueldo/**
+        - id: marcasreloj-service
+          uri: lb://marcasreloj-service
           predicates:
-            - Path=/reloj/**
+            - Path=/marcasreloj/**
 eureka:
   client:
     fetch-registry: true

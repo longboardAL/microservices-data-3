@@ -1,6 +1,6 @@
 spring:
   application:
-    name: planilla-service
+    name: marcasreloj-service
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
@@ -9,7 +9,7 @@ spring:
     hibernate:
       ddl-auto: update
 server:
-  port: 8094
+  port: 8004
   forward-headers-strategy: framework
 eureka:
   client:
@@ -18,7 +18,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
 # server:
-#   port: 8094
+#   port: 8093
 # eureka:
 #   client:
 #     fetch-registry: true
